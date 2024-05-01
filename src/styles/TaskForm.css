@@ -1,0 +1,12 @@
+
+textarea {
+    resize: none;
+}
+
+.btn_create {
+    margin-top: 15px;
+}
+
+.counter_letters {
+    float: right;
+}

@@ -1,0 +1,45 @@
+
+.header_top {
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-image: url(https://free-3dtextureshd.com/wallpapers/Abstract/Desktop%20version/2560%20x%201440/71_Abstract_Background_2560x1440.jpg);
+    border: 0px;
+}
+
+.wave_header {
+    transform: translateY(-10px);
+}
+
+.wave_desktop {
+    position: relative;
+    z-index: 1;
+    transform: translateY(-10px);
+    display: none;
+    margin-top: -70px;
+    overflow: hidden;
+}
+
+.hyperHref {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+.hyperHref:hover {
+    color: white;
+}
+
+@media (min-width: 1239px) {
+    .wave_header {
+        display: none;
+    }
+
+    .wave_desktop {
+        display: block;
+    }
+}

@@ -1,4 +1,3 @@
-
 textarea {
     resize: none;
 }
@@ -9,4 +8,12 @@ textarea {
 
 .counter_letters {
     float: right;
+}
+
+.form-group.completed-checkbox {
+    margin-top: 20px;
+}
+
+.form-check-label {
+    margin-left: 20px;
 }

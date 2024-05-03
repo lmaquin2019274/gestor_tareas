@@ -26,14 +26,14 @@ const CreateTaskForm = ({ handleCreateTask }) => {
 
     const handleSubmit = () => {
         handleCreateTask(task)
-        setTask({ id: null, name: "", description: "", date: "", color: "#FFD257", user:"" })
+        setTask({ id: null, name: "", description: "", date: "", color: "#FFD257", user: "", completed: false })
     }
 
-    return(
+    return (
 
         <TaskForm
-            handleInputChange={handleInputChange} 
-            handleSubmit={handleSubmit}  
+            handleInputChange={handleInputChange}
+            handleSubmit={handleSubmit}
             btnTitle="Crear"
             task={task}
         />

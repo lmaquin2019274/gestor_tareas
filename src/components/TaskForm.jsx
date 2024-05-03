@@ -7,12 +7,13 @@ import TaskValidator from '../data/TaskValidator';
 
 const TaskForm = ({ handleInputChange, handleSubmit, btnTitle, task }) => {
 
-    const { name, description, date, color, user, completed } = task
+    const { name, description, dateInicio, dateCierre, color, user, completed } = task
 
     const [errors, setErrors] = useState({
         name: [],
         description: [],
-        date: [],
+        dateInicio: [],
+        dateCierre: [],
         color: [],
         user: [],
     })
@@ -26,7 +27,7 @@ const TaskForm = ({ handleInputChange, handleSubmit, btnTitle, task }) => {
             setErrors(validationErrors)
 
         } else {
-            setErrors({ name: [], description: [], date: [], color: [], user: [] })
+            setErrors({ name: [], description: [], dateInicio: [], dateCierre: [], color: [], user: [] })
             handleSubmit()
         }
     }
@@ -76,10 +77,20 @@ const TaskForm = ({ handleInputChange, handleSubmit, btnTitle, task }) => {
             </div>
 
             <div className="form-group">
-                <label className="form-label">¿Cuándo debes realizar la tarea?</label>
-                <input type="date" className={`form-control ${errors.date.length > 0 ? "is-invalid" : null}`} value={date} name="date" onChange={handleChange}></input>
+                <label className="form-label">¿Fecha de inicio?</label>
+                <input type="date" className={`form-control ${errors.dateInicio.length > 0 ? "is-invalid" : null}`} value={dateInicio} name="dateInicio" onChange={handleChange}></input>
                 <div className="invalid-feedback">
-                    {errors.date.map(error => (
+                    {errors.dateInicio.map(error => (
+                        error
+                    ))}
+                </div>
+            </div>
+
+            <div className="form-group">
+                <label className="form-label">¿Fecha de cierre?</label>
+                <input type="date" className={`form-control ${errors.dateCierre.length > 0 ? "is-invalid" : null}`} value={dateCierre} name="dateCierre" onChange={handleChange}></input>
+                <div className="invalid-feedback">
+                    {errors.dateCierre.map(error => (
                         error
                     ))}
                 </div>

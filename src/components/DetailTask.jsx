@@ -6,14 +6,15 @@ import React from 'react'
 
 const DetailTask = ({ data }) => {
 
-    const { name, description, date, user } = data
+    const { name, description, dateInicio, dateCierre, user } = data
 
     return (
         <div>
-            <h4><u>{ name }</u></h4>
-            <p>{ description }</p>
-            <p><i>{ date }</i></p>
-            <p><u>{ user }</u></p>
+            <h4><u>{name}</u></h4>
+            <p>{description}</p>
+            <p><i>{dateInicio}</i></p>
+            <p><i>{dateCierre}</i></p>
+            <p><u>{user}</u></p>
         </div>
     )
 

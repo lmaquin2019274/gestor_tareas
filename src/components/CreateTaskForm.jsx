@@ -6,10 +6,11 @@ const CreateTaskForm = ({ handleCreateTask }) => {
         id: null,
         name: "",
         description: "",
-        date: "",
+        dateInicio: "",
+        dateCierre: "",
         color: "#FFD257",
         user: "",
-        completed: false 
+        completed: false
     });
 
     const handleInputChange = ({ target }) => {
@@ -25,10 +26,11 @@ const CreateTaskForm = ({ handleCreateTask }) => {
             id: null,
             name: "",
             description: "",
-            date: "",
+            dateInicio: "",
+            dateCierre: "",
             color: "#FFD257",
             user: "",
-            completed: false 
+            completed: false
         });
     };
 
